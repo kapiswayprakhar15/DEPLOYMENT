@@ -60,18 +60,10 @@ app.use("/api/testimonial", testimonialRoute);
 app.use("/api/categories", categoryRoute);
 
 
-
-
-
-
-
-
 app.get("/api/test", (req, res) => {
   res.send("test");
 });
-
 app.use(express.static(path.join(__dirname, "./Client/build")));
-
 app.get("*", function (_, res) {
   res.sendFile(
     path.join(__dirname, "./Client/build/index.html"),
